@@ -28,7 +28,7 @@ const Page = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-      //   router.push("/otp");
+      router.push(`/verify/${phoneNumber}`);
     }, 2000);
   };
 
@@ -55,7 +55,7 @@ const Page = () => {
   return (
     <KeyboardAvoidingView style={{ flex: 1 }}>
       <View style={styles.container}>
-        {!loading && (
+        {loading && (
           <View style={[StyleSheet.absoluteFill, styles.loading]}>
             <ActivityIndicator size="large" color={Colors.primary} />
             <Text style={{ fontSize: 16, padding: 10 }}>Sending Code ...</Text>

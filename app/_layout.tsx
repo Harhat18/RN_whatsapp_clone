@@ -50,12 +50,15 @@ function RootLayoutNav() {
   return (
     <Stack>
       <Stack.Screen
-        name="index"
-        options={{ headerShown: false, headerBackVisible: false }}
-      />
-      <Stack.Screen
         name="otp"
         options={{ headerTitle: "Enter Your Phone Number" }}
+      />
+      <Stack.Screen
+        name="verify/[phone]"
+        options={{
+          headerTitle: "Verify Your Number",
+          headerBackTitle: "Edit Number",
+        }}
       />
     </Stack>
   );
